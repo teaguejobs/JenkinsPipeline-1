@@ -3,8 +3,7 @@ FROM jenkins/slave:latest-jdk11
 USER root
 
 # Install depency for dotnet core 3.1
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     curl libunwind8 gettext apt-transport-https && \
     curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg && \
     mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg && \

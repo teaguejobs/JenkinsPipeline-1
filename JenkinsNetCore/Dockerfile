@@ -1,4 +1,4 @@
-FROM jenkins/slave:latest
+FROM jenkins/slave:latest-jdk11
 
 USER root
 
